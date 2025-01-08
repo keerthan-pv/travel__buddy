@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Kaushan Script', cursive, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em; /* Set base font size for the app */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Ensure header stays above other components */
+}
+
+.logo-container {
+  display: flex; /* Flex layout to align image and logo text */
+  align-items: center; /* Center items vertically */
+}
+
+.header-logo {
+  height: 120px; /* Adjust height according to your design */
+  margin-right: 10px; /* Space between the logo image and text */
+  border: 3px solid black; /* Add black border */
+  border-radius: 50%; /* Optional: Add rounded corners to the border */
+}
+
+.logo {
+  font-family: 'Kaushan Script', Regular;
+  font-size: 2.5em; 
+  font-weight: normal;
+  color: #fb1900; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  letter-spacing: 1px; 
+  text-align: left; /* Align text to the left */
+}
+
+nav {
+  display: flex; /* Use flex layout */
+  align-items: center; /* Center items vertically */
+  margin-left: 20px; /* Add margin to move it right */
+}
+
+nav a {
+  margin: 0 20px; /* Horizontal margin for spacing */
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Kaushan Script', cursive; 
+  font-size: 1.5em; /* Uniform font size for all links */
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack words vertically */
+  align-items: center; /* Center-align text */
+}
+
+/* Add line height for better spacing */
+nav a span {
+  line-height: 1.2; /* Adjust line height for spacing between words */
+}
+
+/* Specific styling for Travel Buddy link */
+nav a[href='/travelbuddy'] {
+  font-size: 1.5em; /* Keep the font size of Travel Buddy the same as others */
+}
+
+/* Hover effect for links */
+nav a:hover {
+  color: red; /* Change color to red on hover */
+}
+
+.profile-icon {
+  font-size: 2.5em;
+  cursor: pointer;
+  margin-left: 5px; /* Add margin for spacing */
+}
+
+/* Profile component overlay styling */
+.profile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure overlay is above all other components */
+}
+
+.profile-overlay .Profile {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 400px; /* Limit width for better readability */
+  width: 90%; /* Responsive width */
+  text-align: center;
+}
+
+.component-container {
+  flex: 1; 
+  padding: 5px;
+}
+
+/* Optional: Ensure consistent spacing */
+nav a:last-child {
+  margin-right: 0; /* Remove right margin for the last link */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-logo {
+    height: 80px; /* Reduce logo size on smaller screens */
+  }
+
+  nav a {
+    font-size: 1.2em; /* Reduce font size for navigation links */
+    margin: 0 10px; /* Decrease horizontal margin */
+  }
+
+  .profile-icon {
+    font-size: 2em; /* Adjust profile icon size */
+  }
+}
